@@ -3,6 +3,7 @@ import "dotenv/config"
 import OpenAI from "openai"
 import fs from "fs"
 import { commands } from './commands.js';
+import "./src/render.js";
 const {
   Client,
   EmbedBuilder,
