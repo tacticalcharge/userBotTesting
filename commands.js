@@ -1,6 +1,7 @@
 import pkg from 'discord.js';
 const {
   ContextMenuCommandBuilder,
+  SlashCommandBuilder,
   ApplicationCommandType,
   InteractionContextType,
 } = pkg;
@@ -22,4 +23,12 @@ const msginfo = new ContextMenuCommandBuilder()
 	InteractionContextType.BotDM,
 	InteractionContextType.PrivateChannel,
   )
-export const commands = [msginfo, userinfo];
+const evaluate = new ContextMenuCommandBuilder()
+  .setName("Evalute Punishment")
+  .setType(ApplicationCommandType.Message)
+  .setContexts(
+    InteractionContextType.Guild,
+    InteractionContextType.PrivateChannel,
+  )
+
+export const commands = [msginfo, userinfo, evaluate];

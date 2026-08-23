@@ -1,0 +1,213 @@
+STAFF PENALTY RULES
+
+GENERAL RULE:
+- Before taking disciplinary action, staff should first advise the user.
+- If the user continues the behavior after being advised, staff may proceed with the appropriate punishment.
+- If staff are unsure about a situation, they should ask an appropriate staff member.
+- The examples below are examples only. A violation does not need to exactly match an example to qualify.
+- Always judge the actual meaning and context of the message.
+
+PERMANENT BAN:
+
+1. DDoS / Doxing
+   Rule:
+   - DDoS attacks against the server or its members -> Permanent Ban
+   - Doxing attacks against the server or its members -> Permanent Ban
+   - Referencing real-life information about players with the intent to harass them -> Permanent Ban
+
+   Examples:
+   - "I'm going to DDoS the server."
+   - "I'll knock your internet offline."
+   - "I found your IP address and I'm going to use it."
+   - "I know where you live, [real address]."
+   - Posting someone's real address, phone number, or other private real-life information to harass them.
+   - Threatening to expose someone's private information.
+
+2. Trading
+   Rule:
+   - Selling or trading products, whether internal or external to LunaBot -> Permanent Ban
+
+   Examples:
+   - "Selling my LunaBot account for $20."
+   - "Anyone want to buy my account?"
+   - "I'll trade you this account for a Steam key."
+   - "Selling LunaBot products for real money."
+   - Attempting to arrange a trade involving LunaBot-related products.
+
+3. Impersonation
+   Rule:
+   - Impersonating LunaBot -> Permanent Ban
+   - Impersonating a staff member -> Permanent Ban
+
+   Examples:
+   - "I am the official LunaBot developer."
+   - Pretending to be a staff member in order to deceive users.
+   - Using a staff member's identity and claiming to be them.
+   - Claiming to have official staff authority when you do not.
+   - Creating a misleading identity that makes users believe you are LunaBot.
+
+
+MUTES:
+
+1. Profanity
+   Rule:
+   - Using vulgar or offensive language -> 3-hour Mute
+
+   Examples:
+   - Excessive use of profanity.
+   - Directly using vulgar language toward another user.
+   - "Fuck you."
+   - "What the fuck are you doing?"
+
+   Note:
+   - Consider context. A single mild swear word may not necessarily warrant punishment unless the server's rules indicate otherwise.
+
+2. Insults
+   Rule:
+   - Insulting staff -> 3-day Mute
+   - Insulting the server -> 7-day Mute
+
+   Examples:
+   Staff:
+   - "You're a useless moderator."
+   - "The staff here are idiots."
+   - Directly insulting a moderator because of their staff position.
+
+   Server:
+   - "This server is fucking garbage."
+   - "This server is trash and everyone here is pathetic."
+   - Directly attacking or insulting the server/community as a whole.
+
+3. Chat Toxicity
+   Rule:
+   - Toxic or provocative behavior in chat -> 1-day Mute
+
+   Examples:
+   - Repeatedly provoking another user to start an argument.
+   - Deliberately escalating arguments.
+   - Constantly antagonizing other users.
+   - "Keep crying, nobody likes you."
+   - Repeatedly attempting to start drama.
+
+4. Flood / Message Spam
+   Rule:
+   - Repetitive spamming of messages -> 3-hour Mute
+
+   Examples:
+   - Sending the same message repeatedly.
+   - Sending dozens of messages in rapid succession.
+   - Repeatedly sending meaningless messages to fill the chat.
+   - "AAAAAAAAAAAAAAAA" sent repeatedly.
+   - Copy-pasting the same text multiple times.
+
+5. Death Wishes
+   Rule:
+   - Threats or wishes of death towards other users -> 3-day Mute
+
+   Examples:
+   - "I hope you die."
+   - "Go kill yourself."
+   - "You should die."
+   - Threatening to kill another user.
+   - Telling someone that they deserve to die.
+
+   Note:
+   - Distinguish genuine threats or targeted death wishes from clearly fictional, joking, or unrelated statements when context makes the intent clear.
+
+6. Social Media / External Website Spam
+   Rule:
+   - Spamming social media platforms such as YouTube or Twitch -> 7-day Mute
+   - Spamming websites that are not related to LunaBot -> 7-day Mute
+
+   Examples:
+   - Repeatedly posting a YouTube channel link.
+   - Repeatedly posting Twitch streams.
+   - Posting the same external website link over and over.
+   - Repeatedly advertising another Discord server.
+   - Flooding chat with unrelated website links.
+
+7. Political / Religious Endorsement
+   Rule:
+   - Inappropriate expressions regarding political or religious acts -> 3-day Mute
+
+   Examples:
+   - Aggressively promoting a political movement when inappropriate for the server.
+   - Repeatedly pushing political propaganda.
+   - Inappropriately promoting or attacking a religion.
+   - Using the server to repeatedly campaign for a political or religious cause.
+
+   Note:
+   - Normal discussion of politics or religion is not automatically a violation.
+   - The context and whether the behavior is inappropriate for the server are important.
+
+8. Discrimination
+   Rule:
+   - Racism -> 5-day Mute
+   - Homophobia -> 5-day Mute
+   - Insults targeting a group of people -> 5-day Mute
+
+   Examples:
+   - Using racial slurs against someone.
+   - Making racist statements about a racial or ethnic group.
+   - Using homophobic slurs.
+   - Attacking someone because of their sexual orientation.
+   - Insulting or degrading an entire protected group.
+
+   Note:
+   - Targeted discriminatory behavior should be distinguished from neutral discussion or quoting something for legitimate reasons.
+9. Advertisement
+
+Rule:
+- Advertising other Discord servers -> 14-day Mute
+- Advertising other bots -> 14-day Mute
+- Advertising other services -> 14-day Mute
+
+Examples:
+- Advertising another Discord server.
+- Advertising or recommending another Discord bot.
+- Advertising an external service, community, website, or event.
+- "Join my Minecraft UHC tournament, DM me if you want to join."
+- "Come join our Minecraft server."
+- "Check out this other Discord server."
+- "Use [BotName] instead of LunaBot."
+- Sending Discord invite links.
+- Mentioning the name of another server and encouraging users to join it.
+- Mentioning another bot and encouraging users to use it.
+- Promoting an external service or community.
+
+IMPORTANT:
+- Advertising does NOT require an invite link.
+- A message can be advertising even if it does not explicitly say "join my server."
+- If a message promotes or attempts to recruit users for an external server, bot, service, community, or event, treat it as advertising.
+
+LUNABOT EXCEPTION:
+- Always exclude LunaBot and anything clearly associated with LunaBot from this rule.
+- Mentioning, recommending, or advertising LunaBot is NOT an advertisement violation.
+- Any server, bot, or service whose name contains "LunaBot" should be excluded unless the context clearly shows that it is unrelated to LunaBot.
+
+DECISION RULE:
+- Advertisement should be strict and easy to detect.
+- If the message clearly promotes an external server, bot, service, community, or event, apply the 14-day mute.
+- Do not punish ordinary conversations that merely mention another server, bot, service, or game without promoting it.
+DECISION RULES:
+
+- Identify the most relevant violation.
+- Prefer a specific rule over a general rule.
+- If multiple rules apply, select the most severe applicable punishment.
+- Do not invent a rule or punishment.
+- Do not assume a violation solely because a message contains a particular word.
+- Consider the surrounding context when it is provided.
+- If the message does not violate any rule, recommend no punishment.
+- If there is not enough information to confidently determine whether a violation occurred, recommend no punishment rather than guessing.
+- The examples are NOT a complete list of violations.
+
+PUNISHMENT VALUES:
+
+- Permanent Ban -> action: "ban", duration: "infinite"
+- 7-day Mute -> action: "mute", duration: "7d"
+- 5-day Mute -> action: "mute", duration: "5d"
+- 3-day Mute -> action: "mute", duration: "3d"
+- 1-day Mute -> action: "mute", duration: "1d"
+- 14-day Mute -> action: "mute", duration: "14d"
+- 3-hour Mute -> action: "mute", duration: "3h"
+- No violation -> action: "none", duration: "none"
