@@ -25,6 +25,8 @@ const groq = new OpenAI({
   baseURL: "https://api.groq.com/openai/v1"
 });
 
+const recommendations = new Map();
+
 client.on("clientReady", async () => {
   console.log(`Logged in as ${client.user.tag}`);
   try {
@@ -37,6 +39,40 @@ client.on("clientReady", async () => {
 
 
 client.on('interactionCreate', async (interaction) => {
+  if (interaction.isButton()) {
+    const [buttonType, recommendationId] = interaction.customId.split(':');
+    const recommendation = recommendations.get(recommendationId);
+
+    if (!recommendation) {
+      await interaction.reply({
+        content: 'This recommendation has expired. Please evaluate the message again.',
+        flags: MessageFlags.Ephemeral
+      });
+      return;
+    }
+
+    const { result, targetMessage } = recommendation;
+    if (buttonType === 'logging') {
+      await interaction.reply({
+        content: [
+          '```',
+          `User: ${targetMessage.author.id}`,
+          `Type: ${result.action}`,
+          `Reason: ${result.reason}`,
+          'Proof:',
+          '```'
+        ].join('\n'),
+        flags: MessageFlags.Ephemeral
+      });
+    } else if (buttonType === 'mute') {
+      await interaction.reply({
+        content: `\`\`\`\n$mute ${targetMessage.author.id} ${result.duration} ${result.reason}\n\`\`\``,
+        flags: MessageFlags.Ephemeral
+      });
+    }
+    return;
+  }
+
   if (interaction.isContextMenuCommand()) {
     switch (interaction.commandName) {
       case "Get User Info": {
@@ -132,17 +168,20 @@ client.on('interactionCreate', async (interaction) => {
             .addFields({ name: 'Confidence:', value: String(result.confidence), inline: true })
 
           const button1 = new ButtonBuilder()
-              .setLabel('Logging Thread')
-              .setURL("https://discord.com/channels/1183526304365158532/1186582943762747392")
-              .setStyle(ButtonStyle.Link)
+              .setCustomId(`logging:${interaction.id}`)
+              .setLabel('Show Logging Format')
+              .setStyle(ButtonStyle.Secondary)
 
           const button2 = new ButtonBuilder()
-              .setLabel('Mute Channel')
-              .setURL("https://discord.com/channels/886309080099086336/1201668203365793864")
-              .setStyle(ButtonStyle.Link)
+              .setCustomId(`mute:${interaction.id}`)
+              .setLabel('Show Mute Command')
+              .setStyle(ButtonStyle.Secondary)
           console.log(result);
             const row = new ActionRowBuilder()
               .addComponents(button1, button2);
+
+            recommendations.set(interaction.id, { result, targetMessage });
+            setTimeout(() => recommendations.delete(interaction.id), 15 * 60 * 1000);
 
             
           await interaction.reply({
