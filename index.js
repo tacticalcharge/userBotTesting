@@ -115,29 +115,40 @@ client.on('interactionCreate', async (interaction) => {
               .replace("{{RELEVANT_CONTEXT}}", () => relevantContext)
               .replace("{{MODERATION_CONTEXT}}", () => moderationContext);
       
-          const { data: res, response: groqResponse } = await groq.responses.create({
-              model: "openai/gpt-oss-20b",
-              input: prompt,
-              text: {
-                format: {
-                  type: "json_schema",
-                  name: "moderation_recommendation",
-                  strict: true,
-                  schema: {
-                    type: "object",
-                    additionalProperties: false,
-                    properties: {
-                      action: { type: "string", enum: ["none", "warn", "mute", "kick", "ban"] },
-                      duration: { type: "string" },
-                      reason: { type: "string" },
-                      rule: { type: "string" },
-                      confidence: { type: "number", minimum: 0, maximum: 1 }
-                    },
-                    required: ["action", "duration", "reason", "rule", "confidence"]
+          let res;
+          let groqResponse;
+          try {
+            ({ data: res, response: groqResponse } = await groq.responses.create({
+                model: "openai/gpt-oss-20b",
+                input: prompt,
+                text: {
+                  format: {
+                    type: "json_schema",
+                    name: "moderation_recommendation",
+                    strict: true,
+                    schema: {
+                      type: "object",
+                      additionalProperties: false,
+                      properties: {
+                        action: { type: "string", enum: ["none", "warn", "mute", "kick", "ban"] },
+                        duration: { type: "string" },
+                        reason: { type: "string" },
+                        rule: { type: "string" },
+                        confidence: { type: "string" }
+                      },
+                      required: ["action", "duration", "reason", "rule", "confidence"]
+                    }
                   }
                 }
-              }
-              }).withResponse();
+                }).withResponse());
+          } catch (error) {
+            console.error("Groq request failed:", error);
+            await interaction.reply({
+              content: "The moderation recommendation could not be generated. Please try again.",
+              flags: MessageFlags.Ephemeral
+            });
+            break;
+          }
 
               const tokensRemaining = groqResponse.headers.get('x-ratelimit-remaining-tokens') ?? 'unknown';
               const requestsRemaining = groqResponse.headers.get('x-ratelimit-remaining-requests') ?? 'unknown';
@@ -145,6 +156,10 @@ client.on('interactionCreate', async (interaction) => {
           let result;
           try {
             result = JSON.parse(res.output_text);
+            result.confidence = Number(result.confidence);
+            if (!Number.isFinite(result.confidence) || result.confidence < 0 || result.confidence > 1) {
+              throw new Error("Confidence must be a number between 0 and 1");
+            }
           } catch (error) {
             console.error("The moderation model returned invalid JSON:", res.output_text, error);
             await interaction.reply({
