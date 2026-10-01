@@ -14,7 +14,6 @@ const {
   GatewayIntentBits,
   Partials,
   MessageFlags,
-  PermissionFlagsBits,
   ButtonBuilder,
   ButtonStyle,
   ActionRowBuilder
@@ -50,6 +49,13 @@ try {
 
 const allowedReferenceUserIds = new Set(
   (process.env.REFERENCE_ALLOWED_USER_IDS ?? "612273903443902515,1340323274453815317")
+    .split(",")
+    .map((id) => id.trim())
+    .filter((id) => /^\d{5,32}$/.test(id))
+);
+
+const crashLogUserIds = new Set(
+  (process.env.CRASH_LOG_USER_IDS ?? process.env.REFERENCE_ALLOWED_USER_IDS ?? "612273903443902515,1340323274453815317")
     .split(",")
     .map((id) => id.trim())
     .filter((id) => /^\d{5,32}$/.test(id))
@@ -145,6 +151,65 @@ async function generateUniqueReferenceKey(text) {
   return `${base.slice(0, 61)}-99`;
 }
 
+function redactSecrets(text) {
+  let out = String(text ?? "");
+  const secrets = [process.env.TOKEN, process.env.GROQ_API].filter(Boolean);
+  for (const secret of secrets) {
+    if (typeof secret !== "string" || secret.length < 6) continue;
+    out = out.split(secret).join("[REDACTED]");
+  }
+  return out;
+}
+
+function formatError(error) {
+  if (error instanceof Error) {
+    return {
+      name: error.name,
+      message: error.message,
+      stack: error.stack ?? "",
+    };
+  }
+
+  if (typeof error === "string") {
+    return { name: "Error", message: error, stack: "" };
+  }
+
+  try {
+    return { name: "Error", message: JSON.stringify(error), stack: "" };
+  } catch (_err) {
+    return { name: "Error", message: String(error), stack: "" };
+  }
+}
+
+async function dmCrashLog(clientInstance, title, error, extraContext = "") {
+  const ts = new Date().toISOString();
+  const err = formatError(error);
+  const body = redactSecrets(
+    [
+      `Time: ${ts}`,
+      `Title: ${title}`,
+      extraContext ? `Context: ${extraContext}` : "",
+      `Error: ${err.name}: ${err.message}`,
+      err.stack ? `Stack:\n${err.stack}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n")
+  );
+
+  const header = `Bot error report (${ts})`;
+  const short = body.length <= 1800 ? `${header}\n\n\`\`\`\n${body}\n\`\`\`` : `${header}\n\nSee attached log file.`;
+  const files = body.length <= 1800 ? [] : [{ attachment: Buffer.from(body, "utf8"), name: `crash-${Date.now()}.txt` }];
+
+  for (const userId of crashLogUserIds) {
+    try {
+      const user = await clientInstance.users.fetch(userId);
+      await user.send({ content: short, files });
+    } catch (dmError) {
+      console.error("Failed to DM crash log:", userId, dmError);
+    }
+  }
+}
+
 function canManageReferences(interaction) {
   return allowedReferenceUserIds.has(interaction.user.id);
 }
@@ -156,11 +221,33 @@ client.on("clientReady", async () => {
     console.log('Application commands registered successfully.');
   } catch (error) {
     console.error('Failed to register application commands:', error);
+    void dmCrashLog(client, "Failed to register application commands", error);
   }
 })
 
+process.on("unhandledRejection", (reason) => {
+  console.error("unhandledRejection:", reason);
+  void dmCrashLog(client, "unhandledRejection", reason);
+});
+
+process.on("uncaughtException", (error) => {
+  console.error("uncaughtException:", error);
+  void dmCrashLog(client, "uncaughtException", error);
+});
+
+client.on("error", (error) => {
+  console.error("client error:", error);
+  void dmCrashLog(client, "client error", error);
+});
+
+client.on("shardError", (error) => {
+  console.error("shardError:", error);
+  void dmCrashLog(client, "shardError", error);
+});
+
 
 client.on('interactionCreate', async (interaction) => {
+  try {
   if (interaction.isAutocomplete()) {
     if (interaction.commandName !== "reference") return;
     if (!canManageReferences(interaction)) {
@@ -251,6 +338,26 @@ client.on('interactionCreate', async (interaction) => {
               "• `/reference add` — Add a staff reference snippet (key optional).",
               "• `/reference remove` — Remove a reference (key autocomplete shows preview).",
               "• `/reference list` — List references (optional filter).",
+              "",
+              "Note: `/reference` is restricted to the allowlisted user IDs.",
+            ].join("\n"),
+          },
+        )
+        .setFields(
+          {
+            name: "Message context menu (right-click)",
+            value: [
+              "- **Evaluate**: Evaluate a message (support vs rules vs neither).",
+              "- **Get Message Info**: Shows message metadata.",
+              "- **Get User Info**: Shows user metadata.",
+            ].join("\n"),
+          },
+          {
+            name: "Slash commands",
+            value: [
+              "- `/reference add`: Add a staff reference snippet (key optional).",
+              "- `/reference remove`: Remove a reference (key autocomplete shows preview).",
+              "- `/reference list`: List references (optional filter).",
               "",
               "Note: `/reference` is restricted to the allowlisted user IDs.",
             ].join("\n"),
@@ -567,6 +674,18 @@ client.on('interactionCreate', async (interaction) => {
          
           break;
       }
+    }
+  }
+  } catch (error) {
+    console.error("interactionCreate handler error:", error);
+    void dmCrashLog(client, "interactionCreate handler error", error, `type=${interaction.type} command=${interaction.commandName ?? "n/a"}`);
+
+    try {
+      if (interaction.isRepliable() && !interaction.replied && !interaction.deferred) {
+        await interaction.reply({ content: "An unexpected error occurred while handling that interaction.", flags: MessageFlags.Ephemeral });
+      }
+    } catch (_replyError) {
+      // ignore
     }
   }
 });
