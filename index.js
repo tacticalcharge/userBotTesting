@@ -322,7 +322,7 @@ client.on('interactionCreate', async (interaction) => {
       const embed = new EmbedBuilder()
         .setColor("#7289da")
         .setTitle("Help")
-        .setDescription("Quick guide to the available commands:")
+        .setDescription("Simple help:")
         .addFields(
           {
             name: "Message context menu (right-click)",
@@ -360,6 +360,33 @@ client.on('interactionCreate', async (interaction) => {
               "- `/reference list`: List references (optional filter).",
               "",
               "Note: `/reference` is restricted to the allowlisted user IDs.",
+            ].join("\n"),
+          },
+        )
+        .setFields(
+          {
+            name: "Right-click menu",
+            value: [
+              "1) Right-click a message or a user",
+              "2) Click Apps",
+              "3) Pick a command",
+              "",
+              "- Evaluate: checks the message and says support / rules / neither.",
+              "- Get Message Info: shows basic info about the message.",
+              "- Get User Info: shows basic info about the user.",
+            ].join("\n"),
+          },
+          {
+            name: "/reference (saved notes)",
+            value: [
+              "References are short notes you save in the bot.",
+              "Evaluate can use them to help write a support reply.",
+              "",
+              "- /reference add: saves a note (key is optional).",
+              "- /reference remove: deletes a note (key list will show).",
+              "- /reference list: shows your notes.",
+              "",
+              "Only the allowlisted user IDs can use /reference.",
             ].join("\n"),
           },
         )
