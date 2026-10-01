@@ -1,0 +1,212 @@
+[
+  {
+    "slug": "can-i-stop-the-bot-to-responding-in-another-channel",
+    "title": "can i stop the bot to responding in another channel",
+    "answer": "Yea sure follow the steps given below\n1. `!texttoggle`\n\nExecute this command in any channel where you wish to disable LunaBot’s responses.\n\nThis must be applied individually in every channel you want excluded.\n\n2. `!setup` (!setup #channel) \n\nA more efficient alternative to `!texttoggle`.\n\nRequires execution only once.\n\nAutomatically creates a dedicated function channel for LunaBot commands.\n\n3. Compatibility Note\n\nIf you are using `!togglemessage`, the `!setup` command will remain fully functional in conjunction with it.\nReactions: :y_: ×1",
+    "tags": [
+      "setup"
+    ]
+  },
+  {
+    "slug": "how-can-i-change-command-shortcuts",
+    "title": "how can i change command shortcuts",
+    "answer": "Currently, you cannot modify command shortcuts. However, some commands already have predefined shortcuts, such as `!play`.\n\nYou can use multiple shortcuts for this command, including:\n- `!p`\n\nTo view available shortcuts for each command, use the `!help` command. For example:\n- `!help play`\nLet me know if you need further refinements!",
+    "tags": [
+      "shortcuts"
+    ]
+  },
+  {
+    "slug": "how-can-i-change-the-bot-prefix",
+    "title": "how can i change the bot prefix",
+    "answer": "The default prefix for the bot is ``!``, while for the Prime bot it is ``-``.  \nTo check the prefix used in your server, you can mention the bot. To change the prefix, use the command ``!prefix``.\n\n**Example:**  \n- To change the standard bot prefix:  \n  ``!prefix %``  \n  or  \n  ``@LunaBot 🌙#9997prefix``  \n\n- To change the Prime bot prefix:  \n  ``-prefix %``  \n  or  \n  ``@LunaBot Prime 🌙#0940prefix``",
+    "tags": [
+      "premium",
+      "prefix"
+    ]
+  },
+  {
+    "slug": "how-can-i-customise-my-luna-bot-if-i-ve-advanced-or-above-premium-plan",
+    "title": "how can i customise my luna bot if i ve advanced or above premium plan",
+    "answer": "Oh yeah mb\n\n> @Jim The Cow: The default prefix is -, but everything else is correct ^^\n@Chloe [English only] (01/19/2026 6:00 AM)\n😭 no\n\n> @Chloe [English only]: First, invite the custom bot to your server. The bot’s name will be `Luna Music…\n@Jim The Cow (01/19/2026 5:58 AM)\nThe default prefix is -, but everything else is correct ^^\n\n@Chloe [English only] (01/19/2026 5:35 AM, edited 01/19/2026 5:47 AM)\nFirst, invite the custom bot to your server. The bot’s name will be `Luna Music`. Its default prefix is `!`, but this can be changed. If you are not sure what the prefix is, just mention the bot and it will reply with ```the prefix for this server is  !/-```\nIf you want to change the prefix, mention the bot and use this command:\n```@lunamusic prefix your_prefix``` \n[e.g @lunamusic prefix ! ]\nAfter this, the prefix will be changed successfully.\nNow you can start customizing your Custom Luna Bot. There are two ways to do this.\nMethod 1:` Prefix-based commands (using !)`\nTo change the bot’s avatar, use:\n```!setavatar avatar_link or upload an image using the + icon```\nTo change the banner, use:\n```!setbanner media_link, avatar_link, or upload an image```\nTo change the bot’s name, use:\n```!setname name```\nMethod 2: `Slash commands(/)`\nYou can also use the slash command:\n```/settings```\nThis method is easier to use, but sometimes it may show errors if the response is delayed.\n[Attachment: Screenshot_2026-01-19-10-16-14-282_com.discord.png — https://cdn.discordapp.com/attachments/1462666676234489886/1462669797807493151/Screenshot_2026-01-19-10-16-14-282_com.discord.png?ex=6abe8ea6&is=6abd3d26&hm=e80a42d536e36fc949c8b0cb7206052acc5f8a832de7609e7e8beac3914f700b&]\n[Attachment: Screenshot_2026-01-19-10-16-00-748_com.discord.png — https://cdn.discordapp.com/attachments/1462666676234489886/1462669798214471702/Screenshot_2026-01-19-10-16-00-748_com.discord.png?ex=6abe8ea6&is=6abd3d26&hm=fc0a41f033a1d8ac84cd3a6928e228a4b588f1c623c47d9f9c14b17edd2e0f0f&]\n[Attachment: Screenshot_2026-01-19-10-12-43-054_com.discord.png — https://cdn.discordapp.com/attachments/1462666676234489886/1462669798449086689/Screenshot_2026-01-19-10-12-43-054_com.discord.png?ex=6abe8ea7&is=6abd3d27&hm=f8086fa6825ce1db4796fc4cc0c2e0f851d601521d909724574837adcbf644a7&]\n[Attachment: Screenshot_2026-01-19-10-12-01-277_com.discord.png — https://cdn.discordapp.com/attachments/1462666676234489886/1462669798713462825/Screenshot_2026-01-19-10-12-01-277_com.discord.png?ex=6abe8ea7&is=6abd3d27&hm=bcf1bf4ebd8179116081ff794fc3eaf9b7ba30cb61420c67cd667056e8457a5d&]\n[Attachment: Screenshot_2026-01-19-10-13-54-508_com.discord.png — https://cdn.discordapp.com/attachments/1462666676234489886/1462669798944280814/Screenshot_2026-01-19-10-13-54-508_com.discord.png?ex=6abe8ea7&is=6abd3d27&hm=b21d16b576915f12ef03e546589575fbf3fdd422c646cc09ddbb46bea441837f&]",
+    "tags": [
+      "premium",
+      "prefix"
+    ]
+  },
+  {
+    "slug": "how-do-i-cancel-my-subscription",
+    "title": "how do i cancel my subscription",
+    "answer": "here's an updated version. i made the other one a long time ago\n\n@! blake (01/16/2026 9:50 PM)\n- Head to the link below 👇 \n  - [LunaBot Membership Card](https://www.patreon.com/c/lunamusicbot/membership)\n\n- Then, click on the pen icon (As shown in the image below 👇) \n  - Now, you can click \"Cancel Membership\"\n[Attachment: image.png — https://cdn.discordapp.com/attachments/1362731200560500766/1461824994740015204/image.png?ex=6abe1ede&is=6abccd5e&hm=addeb1e1403c74ccbb0870a06cd12b47936e08aae7e5306b515a154a63813fc4&]\n\n@H͛ugh (04/18/2025 12:07 PM, edited 04/18/2025 1:22 PM)\n- go to this [link](https://www.patreon.com/c/lunamusicbot/membership) \n- click the pen icon in the top right corner\n- click `cancel membership`\nReactions: ❤️ ×4",
+    "tags": [
+      "patreon"
+    ]
+  },
+  {
+    "slug": "how-i-can-add-a-person-who-can-use-only-luna-bot",
+    "title": "how i can add a person who can use only luna bot",
+    "answer": "Follow some simple steps given below:\n-  Create `DJ` role from your server settings . \n- Give to the person whom you want to use Luna Bot. \n- Use `/setdjrole role:rolename/I'd/mention` this will set you DJ role for bot. \n- Now follow the last step use `/setdjcommamds` make a selection of commands according to your choice whatever you want your `DJ` person can .\n\n@!,Dr-D (06/24/2025 4:57 AM)\nFollow some simple steps given below:\n-  Create `DJ` role from your server settings . \n- Give to the person whom you want to use Luna Bot. \n- Use `/setdjrole role:rolename/I'd/mention` this will set you DJ role for bot. \n- Now follow the last step use `/setdhcommamds` make a selection of commands according to your choice whatever you want your `DJ` person can .",
+    "tags": [
+      "roles"
+    ]
+  },
+  {
+    "slug": "how-to-manage-refund-requests-for-lunabot-premium",
+    "title": "how to manage refund requests for lunabot premium",
+    "answer": "**Update:**\n__Under “Ineligible Refunds:”__\n~~“Subscribers who claim to have purchased a Premium Subscription outside Patreon or on a website that pretends to be Patreon.” - Premium Subscriptions can only be purchased through Patreon; if this changes in the future, the message will be edited.~~\n> As of recently, subscriptions can be purchased through platforms outside of Patreon. This post, however, only covers the refund policy that Patreon adapts to. You may need to ask Antaka about Refund Requests from users who claim to have purchased a subscription from a platform outside of Patreon.\n\n@Jim The Cow (01/03/2026 12:17 PM, edited 08/17/2026 2:40 PM)\nLunaBot Premium Subscribers are eligible for a refund if they meet the requirements mentioned in the link below:\n[Patreon Refund Policy EN](https://support.patreon.com/hc/en-us/articles/205032045-Patreon-s-refund-policy)\nThe above link mentions who is eligible for a refund, and who isn’t. \n__Eligible Refunds include:__\n“Subscriber forgets to cancel membership.” - They are eligible for a full refund for **one** specific payment cycle.\n“LunaBot stops offering Premium Subscriptions and the Subscriber’s already-in-use Subscription stops working.” - They are eligible for a full refund for **one or more** specific payment cycles, depending on when the service stopped.\n“Subscriber has valid proof of LunaBot’s Premium Subscriptions violating existing or new policies regarding harassment and abuse.” - Amount of payment cycles being refunded **varies**.\n“Subscriber gets blacklisted before using their Subscription.” - They are eligible for **one** specific payment cycle, **unless their blacklist gets removed quickly after.** \n“Subscriber has already cancelled their automatic renewal but their account gets charged.” - They are eligible for **one** specific payment cycle **if they include a receipt of their bank’s transaction.**\n“Subscriber has cancelled their membership within **2 hours** of their last renewal/subscription.” - They are eligible for **one** specific payment cycle.\n“Subscriber pays for the Subscription while thinking they’re using a currency different than the one listed on the website.” - They are eligible for **one or more** specific payment cycles, depending on their first payment cycle if still occurring, **only if their currency is not listed in the Pre-Billing and Billing phases of the website.**\n“LunaBot suddenly stops producing and the Subscriber still has an active Subscription.” - They are eligible for **one or more** specific payment cycles, depending on when the service stopped producing.\n\n**If you think that the Subscriber is eligible for one, you may ping a Community Manager or Admin.**\n\n __Ineligible Refunds include:__\n“Subscriber’s LunaBot Premium Bot stops working due to a temporary outage or downtime.” - Our [Terms of Service](https://lunabot.vc/terms-of-service/) mention that we reserve the right to suspend or terminate someone’s access to the service at any time, without prior notice, for any reason whatsoever.\n“Subscriber’s remorse. This includes accidental purchases, change of mind and other excuses, **unless they meet at least one requirement from the above list.** \n“Subscribers who claim to have purchased a Premium Subscription outside Patreon or on a website that pretends to be Patreon.” - Premium Subscriptions can only be purchased through Patreon; if this changes in the future, the message will be edited.\n“Subscriber’s Transactions which have already been refunded or chargedback by their or the Owner’s Bank.” - If someone attempts to request a refund after having received one from their or the Owner’s bank, we have the right to blacklist them.\n\n**If you are unsure whether a Subscriber is eligible for a refund or not, please mention a Moderator or higher. Useful links towards the Subscriber can be found below:**\n[Patreon’s Refund Policy (EN)](https://support.patreon.com/hc/en-us/articles/205032045-Patreon-s-refund-policy)\n[Refund Policy through lunabot.vc](https://lunabot.vc/refund_returns-2/)\n[LunaBot and LunaBot Subscriptions Terms of Service (ToS)](https://lunabot.vc/terms-of-service/)\n[Patreon Subscription Options](https://www.patreon.com/lunamusicbot)\nReactions: :y_: ×1",
+    "tags": [
+      "patreon",
+      "premium",
+      "refund"
+    ]
+  },
+  {
+    "slug": "how-to-remove-filter-after-applying-it-in-prime",
+    "title": "how to remove filter after applying it in prime",
+    "answer": "if you've already applied the filter through the **/filters** menu then you should see the \"clearfilter\" option within the menu\n[Attachment: image-1.png — https://cdn.discordapp.com/attachments/1373980417404698715/1373980417580994611/image-1.png?ex=6abe3efa&is=6abced7a&hm=c75e63288d841027a336f85117d672ad58c96e55415f48da95145bc2f2e2549b&]",
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "slug": "how-to-restrict-members-from-using-lunabot-or-certain-commands",
+    "title": "how to restrict members from using lunabot or certain commands",
+    "answer": "**How to Restrict Members From Using Lunabot or Certain Commands**  \n\nFollow these steps to restrict members from **Lunabot** in your Discord server:  \n\n**1. Select a Role for the DJ State**  \n- Use the following command:  \n  - `/setdj`  \n\n**2. Select Which Command(s) to Restrict**  \n- Use the following command:  \n  - `/setdjonly`  \n- Then type which command you'd like to restrict  \n  \n**3. Want to See all Commands?**  \n- Use the following command:  \n  - `/help`",
+    "tags": [
+      "roles"
+    ]
+  },
+  {
+    "slug": "i-just-purchased-premium-for-custom-bot-now-how-can-i-avail-it",
+    "title": "i just purchased premium for custom bot now how can i avail it",
+    "answer": "> @Chloe [English only]: My bad\n@Jim The Cow (04/30/2026 2:51 PM)\nNo worries; people should use !addserver first, and then !links. Therefore 1 and 2 should be the other way around\n\n@Chloe [English only] (04/30/2026 1:35 PM)\nMy bad\n\n@Chloe [English only] (04/30/2026 1:35 PM)\nSorry i took too long time to change it\n\n@Chloe [English only] (04/30/2026 1:34 PM)\n<@924197251880976414> check. Once\n\n> @Jim The Cow: I'm talking about the mistake you made about number 5\n@Chloe [English only] (03/11/2026 3:38 PM)\nOh sorryy brother\n\n@Jim The Cow (03/11/2026 3:37 PM)\nI'm talking about the mistake you made about number 5\n\n@Jim The Cow (03/11/2026 3:37 PM)\nhey <@1288033464456712202>, i saw this message was pinned inside support-en. can you edit it here so it shows up correctly?\n\n> @Jim The Cow: hey <@1288033464456712202>, number 5 is incorrect. using !links before adding y…\n@Chloe [English only] (01/16/2026 9:08 PM)\nThnx jim\n\n@Jim The Cow (01/16/2026 8:47 PM)\nhey <@1288033464456712202>, number 5 is incorrect. using !links before adding your server will result in the error message \"You have not added any bots yet.\"\n\n@Chloe [English only] (01/16/2026 8:21 PM, edited 04/30/2026 1:34 PM)\n<:lunae:1234999908717690910>  How to Get Your Custom Luna Bot Invite\n\n1. Start by using one of the following commands:\n\n`!links` → use this from the Standard Luna Bot <:lunae:1234999908717690910> \n\n`-links` → use this from the Prime Luna Bot <:luna:1187169548588298311> \n\n2. After running the command, add your server using:\n\n`!addserver <server_id or server_invite_link>`\n\n3. Command behavior clarification:\n\nIf you use `!links`, the Standard Luna Bot will send the custom bot invite link to your DMs.\n\nIf you use `-links`, the Prime Luna Bot will send the custom bot invite link to your DMs.\n\n<:m_:1187169553814409226> 4. Important requirements:\n\nYour DMs must be open to receive the invite link.\n\nAlways use the correct command prefix (`! `or `-`) depending on which Luna Bot (Standard or Prime) you are interacting with.\n\n5. <:x_:1187169558268752004> add your server before using the links command:\n\nFollowing these steps in the correct order ensures you receive the correct custom Luna Bot invite without any confusion.",
+    "tags": [
+      "premium",
+      "prefix"
+    ]
+  },
+  {
+    "slug": "i-just-subscribed-to-prime-and-i-ve-premium-role-but-luna-says-i-m-not-a-premium-user-why",
+    "title": "i just subscribed to prime and i ve premium role but luna says i m not a premium user why",
+    "answer": "If anyone is still facing any problem regarding Patreon let zd8 (Z) know about it.\n\n@Chloe [English only] (01/07/2026 2:03 AM, edited 01/07/2026 2:03 AM)\nNow there's an update regarding roles previously we've premium and tier roles they are same now but new system added in the form of role,the new role is `SUBSCRIBER` it means you've subscribed and you're now able to use all premium perks.\nStaffs can use <#1185716309036642454> for reference regarding this faq. https://discord.com/channels/1183526304365158532/1185716309036642454/1456835184253993055\n**🚀 New Patreon System Update**\nWe’ve launched a **new Patreon system** for Luna Bot.\n\nPlease read carefully to avoid any confusion:\n\n• If you **linked your Discord account before subscribing**, your subscription and role will be granted **immediately**.\n• If you **linked your Discord account after subscribing**, automatic syncing may take **10–20 minutes**.\n• If you still **don’t receive your role**, first double-check that:\n\n* Your Patreon subscription is active\n* Your Discord account is properly linked\n\nIf you are **100% sure everything is correct** and the role is still missing, please do the following:\n\n1️⃣ Take a screenshot of your subscription page:\nhttps://www.patreon.com/c/lunamusicbot/membership\n\n2️⃣ Take a screenshot of your Discord connection page:\nhttps://www.patreon.com/c/lunamusicbot/membership\n\n3️⃣ Attach both screenshots in the **support channel**, mention **one of the support team or me**, and **wait for assistance**.\n\nThanks for your patience and support 💙",
+    "tags": [
+      "patreon",
+      "premium",
+      "roles"
+    ]
+  },
+  {
+    "slug": "if-i-leave-the-support-server-will-i-not-be-able-to-avail-the-premium-benefits",
+    "title": "if i leave the support server will i not be able to avail the premium benefits",
+    "answer": "This is a myth, even if you leave the server, your premium will be working , such issue occurs sometimes, if you leave the server then your premium may be revoked.\nbut you can fix it again by using `!activate` command in your server or do rejoin support server again.",
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "slug": "issue-with-receiving-the-prime-role-in-the-server",
+    "title": "issue with receiving the prime role in the server",
+    "answer": "Many users are having trouble receiving their Prime role in the server.  \nSend them this link:\n\nhttps://www.patreon.com/c/lunamusicbot/membership\n\nAsk them to send you a screenshot.  \nIf the subscription in the screenshot shows “Free” tell them to click the “Upgrade” button and re-subscribe.  \nIt will cost $0 since they have already paid, but this step will activate their subscription.\n\nIf the subscription shows anything other than “Free” mention z.",
+    "tags": [
+      "patreon",
+      "premium",
+      "roles"
+    ]
+  },
+  {
+    "slug": "still-won-t-let-people-use-the-play-command-except-us-admins",
+    "title": "still won t let people use the play command except us admins",
+    "answer": "In such case may be you have setup `!play/-play` command as `DJ` command and it can be used by the members who have bot's DJ role.If you are removing `!play/-play` command from `DJ only` and still giving you some issues like `this command is for DJ only ` or `You are unable to use this command` use `!reset/-reset` this will reset your bot's settings and setups and now you are all set and go to play. \n`Note`- `!` is prefix for standard bot <@451379187031343104> & \n`-` is prefix for Prime bot which is <@1025279212250214420>.\n[Attachment: Screenshot_2025-06-26-08-43-25-263_com.discord.png — https://cdn.discordapp.com/attachments/1387631720798355527/1387631852688375808/Screenshot_2025-06-26-08-43-25-263_com.discord.png?ex=6abe789e&is=6abd271e&hm=f1c881b30f75783354abc004a6eef49887e895495119b7a1c923e6c7708ac38b&]",
+    "tags": [
+      "premium",
+      "roles",
+      "prefix",
+      "setup"
+    ]
+  },
+  {
+    "slug": "what-is-the-setup-command",
+    "title": "what is the setup command",
+    "answer": "The ``setup`` command is used to designate a channel where a **playback panel** will be displayed, similar to the provided example. Once configured, users no longer need to enter the command each time simply typing the song name will initiate playback.  \n\n**How to use it:**  \n- ``!setup`` followed by the channel name  \n- ``-setup`` followed by the channel name (for Prime)\n[Attachment: ta.png — https://cdn.discordapp.com/attachments/1371546341456744468/1371546341628706972/ta.png?ex=6abe9e91&is=6abd4d11&hm=4bff728e7454bafd493acb56ba78fa1b07a1da4b672adc3ba3e8f2a4bc97da09&]",
+    "tags": [
+      "premium",
+      "setup"
+    ]
+  },
+  {
+    "slug": "what-s-my-spotify-id-where-do-i-find-it",
+    "title": "what s my spotify id where do i find it",
+    "answer": "Followollow the steps below\n- open your Spotify in iOS / Android/Desktop\n- Click on your profile in left side. \n- Click on `Settings and privacy` . \n- Click on Account\n- You'll find Username in account details it would be in mixed letters.\n[Attachment: Screenshot_2025-06-17-06-39-45-855_com.spotify.music-edit.jpg — https://cdn.discordapp.com/attachments/1416676573674868827/1416676574224318475/Screenshot_2025-06-17-06-39-45-855_com.spotify.music-edit.jpg?ex=6abe01df&is=6abcb05f&hm=5e0818c6d31b04897786744dc4f4c686300af166e407aa978ff7bc5195b51cd2&]\n[Attachment: Screenshot_2025-06-17-06-40-14-874_com.spotify.music-edit.jpg — https://cdn.discordapp.com/attachments/1416676573674868827/1416676574912188556/Screenshot_2025-06-17-06-40-14-874_com.spotify.music-edit.jpg?ex=6abe01e0&is=6abcb060&hm=ae620e4bf4793d374a0279ed6f1d77618022845648d2df306c4d0e26de9f1da8&]\n[Attachment: Screenshot_2025-06-17-06-40-35-863_com.spotify.music-edit.jpg — https://cdn.discordapp.com/attachments/1416676573674868827/1416676576048713829/Screenshot_2025-06-17-06-40-35-863_com.spotify.music-edit.jpg?ex=6abe01e0&is=6abcb060&hm=5c94ff8720021af8f0673c292aca4090f060e34c9e6f5e676129fafc6ce0d063&]\n[Attachment: Screenshot_2025-06-17-06-40-54-445_com.spotify.music-edit.jpg — https://cdn.discordapp.com/attachments/1416676573674868827/1416676576766197852/Screenshot_2025-06-17-06-40-54-445_com.spotify.music-edit.jpg?ex=6abe01e0&is=6abcb060&hm=ff40911b4aa48e69a81288e75cc327b876090c0b5630a6742480a8074f7ad92a&]",
+    "tags": [
+      "spotify"
+    ]
+  },
+  {
+    "slug": "when-i-m-using-play-command-luna-responds-with-you-don-t-have-type-message-permission",
+    "title": "when i m using play command luna responds with you don t have type message permission",
+    "answer": "When this issue occurs check you channel's permission again and enable some permission for `@everyone` role like `view channel` ,`send message` , `use application commands` , and also make sure that bot has some specific permissions such as `view channel` , `send message` , ` embed links` , `add attachment` . \n`Note` - This permission is for only `command channel` not for voice channel.",
+    "tags": [
+      "roles",
+      "permissions"
+    ]
+  },
+  {
+    "slug": "whenever-i-try-to-play-music-my-bot-is-lagging",
+    "title": "whenever i try to play music my bot is lagging",
+    "answer": "If you feel your bot is lagging try steps given below⬇\n- Check your internet connection. \n- Try to change your region to `US CENTRAL`\n`Note` - You can change bot's region only if it is standard bot not for prime. \n- Try to increase bits of your voice channel according to internet. \n- If these steps.still don't help in fixing your issue try changing your vc reason from voice setting.",
+    "tags": [
+      "premium"
+    ]
+  },
+  {
+    "slug": "why-am-i-not-able-to-change-my-bot-s-banner-custom-bot",
+    "title": "why am i not able to change my bot s banner custom bot",
+    "answer": "Whenever I change the banner of the bot, the banner of the setup channel changes not bot's profile banner, many of them are facing the same issue with custom bots .\nThere are two ways of changing banner of custom bot which are  =>\n# <a:dot_yellow:1301961993053540464> Set-up banner change\n - `/settings` > `click on banner` and `send an attachment before 30 seconds in same channel/attachment link or media link` \nThis command will change the setup channel banner.\n# <a:dot_yellow:1301961993053540464> Bot banner change\n- Use `-setbanner ` command follows with attachment/ media link or attachment link. This command won't work immediately but will be effective after 4 -5 mins after using the command and  restart your discord.\n[Attachment: Screenshot_2025-05-13-07-49-12-563_com.discord.png — https://cdn.discordapp.com/attachments/1372434150333612092/1372434152305070080/Screenshot_2025-05-13-07-49-12-563_com.discord.png?ex=6abe8da8&is=6abd3c28&hm=5dd4e16a66d6a4cf0052a075380c1846788067b303a80dcdb34a4a4bd2404a73&]\n[Attachment: Screenshot_2025-05-13-07-44-51-806_com.discord.png — https://cdn.discordapp.com/attachments/1372434150333612092/1372434153051787305/Screenshot_2025-05-13-07-44-51-806_com.discord.png?ex=6abe8da8&is=6abd3c28&hm=3eb756d850aed762eec7bfcc1cf16aca882c96f08f7bb2c5f867654fe9402b0b&]\n[Attachment: Screenshot_2025-05-13-07-44-15-654_com.discord.png — https://cdn.discordapp.com/attachments/1372434150333612092/1372434153399779358/Screenshot_2025-05-13-07-44-15-654_com.discord.png?ex=6abe8da8&is=6abd3c28&hm=1308e492af323d75613aa2464fe3aac05c4e8ff8cb40f2107ceb1ce22250cf40&]\nReactions: 👍 ×3",
+    "tags": [
+      "setup"
+    ]
+  },
+  {
+    "slug": "why-does-the-bot-request-admin-permissions",
+    "title": "why does the bot request admin permissions",
+    "answer": "Granting Administrator permissions isn’t strictly required for LunaBot to function. It only requests it to simplify setup and avoid permission issues across multiple channels. If you prefer, you can simply grant the specific permissions it needs (Connect, Speak, Send Messages, Use Slash Commands, and Manage Messages) and the bot will work perfectly fine.",
+    "tags": [
+      "permissions",
+      "setup"
+    ]
+  },
+  {
+    "slug": "why-is-autoplay-not-working",
+    "title": "why is autoplay not working",
+    "answer": "You can enable the Autoplay feature with two ways:\n- Using the /autoplay command or the corresponding prefix command,\n- Using the Autoplay button within the Nowplaying message.\nIf you're sure the feature is enabled and the queue isn't filled with similar tracks, please keep in mind that it is only available when paired with YouTube or YTMusic tracks.",
+    "tags": [
+      "prefix",
+      "autoplay"
+    ]
+  },
+  {
+    "slug": "why-is-lunabot-connecting-to-an-undefined-spotify-account-instead-of-mine",
+    "title": "why is lunabot connecting to an undefined spotify account instead of mine",
+    "answer": "There is an issue with the system, and it will be resolved in the next update.\nReactions: ❤️ ×1",
+    "tags": [
+      "spotify"
+    ]
+  },
+  {
+    "slug": "why-is-the-bot-offline-in-my-server-while-it-is-online-in-another-server",
+    "title": "why is the bot offline in my server while it is online in another server",
+    "answer": "This issue occurs due to the **failure of one of the shards**, which is a crucial part of the system responsible for distributing processes among servers. When this happens, some servers may remain online while others disconnect, affecting the performance of your server.  \n\nTo resolve the issue, please send your **server ID and invite link** via private message, and we will coordinate with the developers to ensure a prompt resolution.",
+    "tags": []
+  },
+  {
+    "slug": "why-my-free-trial-is-ended-even-i-didn-t-used-it-ever",
+    "title": "why my free trial is ended even i didn t used it ever",
+    "answer": "If your Luna Bot free trial is showing as ended, it means one of the following:\n\n- You have already used your 7-day trial benefits.\n\n- The server owner/admin added the bot more than 7 days ago, and the trial period has expired.",
+    "tags": []
+  },
+  {
+    "slug": "why-my-playlist-stopped-playing-suddenly",
+    "title": "why my playlist stopped playing suddenly",
+    "answer": "Info- I gave command to play my playlist but bot stops after playing some songs!\n\nAns- There are many reasons that may stop your music from playing . \n\nAge restrictions, region limitations and many more things. \nWhen you put a playlist with more than 400 tracks and the bot get one of those the playlist will stop",
+    "tags": []
+  }
+]

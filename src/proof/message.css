@@ -1,0 +1,105 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #313338;
+  color: #dbdee1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 720px;
+  background: #313338;
+}
+
+.proof-card {
+  width: 720px;
+  padding: 28px 32px;
+  background: #313338;
+}
+
+.proof-label {
+  margin: 0 0 20px;
+  color: #b5bac1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.message {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #5865f2;
+}
+
+.message-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.message-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.author {
+  color: #f2f3f5;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.timestamp {
+  color: #949ba4;
+  font-size: 12px;
+}
+
+.content {
+  margin: 0;
+  color: #dbdee1;
+  font-size: 16px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.attachment {
+  display: block;
+  max-width: 500px;
+  margin-top: 12px;
+  border-radius: 8px;
+}
+
+.attachment-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #00a8fc;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.source {
+  margin: 24px 0 0 60px;
+  padding-top: 12px;
+  border-top: 1px solid #3f4147;
+  color: #949ba4;
+  font-size: 12px;
+}
+
+.source a {
+  color: #00a8fc;
+}

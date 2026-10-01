@@ -7,7 +7,7 @@ flowchart TB
         n7["Make User Confirm Logging Message"]
   end
     n1["Bot"] --> n2["Context Commands"]
-    n2 --> n3["Evaluate Punishment"]
+    n2 --> n3["Evaluate"]
     n3 --> n4["Future Plans"]
     n4 --> n7
     n7 --> n8
