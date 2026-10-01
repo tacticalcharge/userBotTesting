@@ -503,6 +503,12 @@ client.on('interactionCreate', async (interaction) => {
         break;
       }
       case "Evaluate": {
+          try {
+            await interaction.deferReply({ ephemeral: true });
+          } catch (_error) {
+            // If we fail to defer (rare), we'll attempt a normal reply later.
+          }
+
           const serverRules = fs.readFileSync("./src/rules.txt", "utf8");
           const serverInfo = interaction.guild
             ? `Server: ${interaction.guild.name} (${interaction.guild.id})`
@@ -604,10 +610,11 @@ client.on('interactionCreate', async (interaction) => {
                 }).withResponse());
           } catch (error) {
             console.error("Groq request failed:", error);
-            await interaction.reply({
-              content: "The moderation recommendation could not be generated. Please try again.",
-              flags: MessageFlags.Ephemeral
-            });
+            if (interaction.deferred || interaction.replied) {
+              await interaction.editReply({ content: "The moderation recommendation could not be generated. Please try again." });
+            } else {
+              await interaction.reply({ content: "The moderation recommendation could not be generated. Please try again.", flags: MessageFlags.Ephemeral });
+            }
             break;
           }
 
@@ -622,10 +629,11 @@ client.on('interactionCreate', async (interaction) => {
             }
           } catch (error) {
             console.error("The moderation model returned invalid JSON:", res.output_text, error);
-            await interaction.reply({
-              content: "The moderation recommendation could not be read. Please try again.",
-              flags: MessageFlags.Ephemeral
-            });
+            if (interaction.deferred || interaction.replied) {
+              await interaction.editReply({ content: "The moderation recommendation could not be read. Please try again." });
+            } else {
+              await interaction.reply({ content: "The moderation recommendation could not be read. Please try again.", flags: MessageFlags.Ephemeral });
+            }
             break;
           }
 
@@ -693,11 +701,11 @@ client.on('interactionCreate', async (interaction) => {
           }
 
           console.log(result);
-          await interaction.reply({
-            embeds: [embed],
-            components,
-            flags: MessageFlags.Ephemeral
-          });
+          if (interaction.deferred || interaction.replied) {
+            await interaction.editReply({ embeds: [embed], components });
+          } else {
+            await interaction.reply({ embeds: [embed], components, flags: MessageFlags.Ephemeral });
+          }
          
           break;
       }
